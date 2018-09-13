@@ -1,0 +1,60 @@
+html, body, section {  height: 100%;  overflow: hidden;  }
+* {  margin: 0;  padding: 0;  box-sizing: border-box;  }
+ul > li {  list-style: none;  }
+body {  position: relative;  }
+.clearfix::before {  content: '';  display: block;  clear: both;  }
+.icon {  width: 1em; height: 1em;  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;  }
+
+.page-music > main{  padding-top: 12vh;  width: 600px;  margin: 0 auto;  height: 75%;  position: relative;  }
+.page-music > footer{  height:24vh;  width: 600px;  margin: 0 auto;  color:white;  background: rgba(255,255,255,0.2);  box-shadow: 0 -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);  }
+
+@media (max-width: 1400px) {  .page-music > main, .page-music footer  {  width: 1100px;  }  }
+@media (max-width: 1200px) {  .page-music > main, .page-music footer  {  width: 1000px;  }  }
+@media (max-width: 1000px) {  .page-music > main, .page-music footer  {  width: 800px;  }  }
+@media (max-width: 900px) {  .page-music > main, .page-music footer {  width: 700px;  }  }
+@media (max-width: 700px) {  .page-music > main, .page-music footer  {  width: 500px;  }  }
+@media (max-width: 300px) {  .page-music > main, .page-music footer  {  width: 200px;  }  }
+
+.bg {  position: absolute; /*height:100%;*/  background: url("../images/public_tuijian_spring.jpg-big") center center no-repeat;  top: -10px;  left: -10px;  bottom: -10px;  right: -10px;  background-size: cover;  filter: blur(2px);  z-index: -1;  }
+.bg::before {  content: '';  position: absolute;  top: 0;  right: 0;  bottom: 0;  left: 0;  background: rgba(0, 0, 0, 0.4);  }
+
+.page-music .layout{  position: relative;}
+.page-music .layout .aside,
+.page-music .layout .detail {  float: left;  }
+
+.page-music .layout .aside figure {  height: 46vh;  width: 46vh;  background:url("../images/public_tuijian_spring.jpg-small") ;  background-size:cover;  }
+.page-music .layout .aside .actions{  display: flex;  margin-top:4vh;  }
+.page-music .layout .aside .actions svg{  flex: 1;  cursor: pointer;  text-align: center;  font-size:7vh;  color:rgba(255,255,255,0.4);  }
+.page-music .layout .aside .actions svg:hover{  color:rgba(255,255,255,0.6);  }
+
+
+.page-music .layout .detail{  position:absolute;  margin-left:56vh;  color:white;  width:calc(100% - 56vh);  }
+.page-music .layout .detail .tag{  background:#2e6eec;  font-size:2vh;  padding:0.4em 0.8em;  }
+.page-music .layout .detail h1{  font-size: 6vh;  margin-top:2vh;  }
+.page-music .layout .detail .icons{  display: flex;  font-size: 3vh;  margin-top:12vh;  }
+.page-music .layout .detail .icons li{color:white;   flex:1;  }
+.page-music .layout .detail .icons li svg { font-size: 3vh;  margin-right: 1vh;  }
+
+
+.page-music .layout .detail .area-bar {  margin-top:10vh;  display: flex;  align-items:center;  }
+.page-music .layout .detail .area-bar .bar{  flex:1;  position:relative;  height:0.8vh;  border-radius:0.2vh;  background: rgba(255,255,255,0.4);  }
+.page-music .layout .detail .area-bar .bar .bar-progress {  position:absolute;  height:100%;  width:10%;  background:white ;  border-radius: 0.2vh;  transition: width 0.8s;  }
+.page-music .layout .detail .area-bar .current-time { /*width:3vh;*/  font-size:2vh;  margin-left:1vh;  }
+.page-music .layout .detail .author{  font-size:3vh;  margin-top: 3vh;  }
+.page-music .layout .detail .lyric{  font-size:2vh;  margin-top:2vh;  color: rgba(255,255,255,0.4);  }
+
+.page-music footer .layout svg {  position: absolute;  top:6vh;  font-size: 12vh;  color: rgba(255,255,255,0.4); /*opacity: 0;*/  transition: all 0.4s;  cursor: pointer;  }
+.page-music footer .layout svg:first-child{  left:-12vh;  }
+.page-music footer .layout svg:nth-child(2){  right:-12vh;  }
+.page-music footer .layout .box{  width:100%; position: relative;  overflow: hidden;  height: 24vh;  }
+.page-music footer .layout .box ul{  position: absolute;    left:0;  }
+.page-music footer .layout .box ul li{  float:left;  margin:3vh 2vh 0 2vh;  width:20vh;  height:20vh;  text-align: center;  cursor: pointer;  }
+.page-music footer .layout .box ul li .cover{  height:16vh;  background-size: cover;  background-position: center center;  }
+.page-music footer .layout .box ul li h3{  font-size:2vh;  color:rgba(255,255,255,0.6);  margin-top:1vh;  bottom:0;}
+.page-music footer .layout svg:hover{  color:rgba(255,255,255,0.8)  }
+.page-music footer .layout .box ul li:hover{  box-shadow: 0 0 0.5vh 0.5vh rgba(255,255,255,0.8);  }
+.page-music footer .layout .box ul li.active{  box-shadow: 0 0 0.5vh 0.5vh rgba(255,255,255,0.8);  }
+.page-cover{  display:none;  }
+
+.boomText{  display: inline-block;  opacity:0;  }
+
